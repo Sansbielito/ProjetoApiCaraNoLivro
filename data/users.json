@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "name": "AdminUser",
+    "admin": true
+  },
+  {
+    "id": 6,
+    "name": "TempPersist",
+    "admin": false,
+    "passwordSalt": "9b17e25867796cedb055b820fbd6012f",
+    "passwordHash": "5c58c30bf9e5ff491501529bb503e210dfa43700167527d975479194dcc96bc869921d83766892f9ed6244ab084c96f5868d8c7d951e956dadba1d20f7c08857"
+  },
+  {
+    "id": 7,
+    "name": "SmokeUser",
+    "admin": false,
+    "passwordSalt": "e2eb4db094d10deb7ed6f61d5b2ad7d1",
+    "passwordHash": "2835eb6a6faa3b3794550d9c03835b8055404e542a217bc97dcc4712a4fa0ad61fc8d2df236dd4634f501b22c3321d0a82461216ec3730cbb0f5cb7cb320f270"
+  },
+  {
+    "id": 8,
+    "name": "SmokeUser",
+    "admin": false,
+    "passwordSalt": "dca68b2c93259095af0ca434f308acfa",
+    "passwordHash": "cd7e062b8f4112e7e06d33865889097f2765350fdee0522401555013384677f099a9827915fc86b6d2448f7f2346723e4b0c471c0ed746328f19a5f211073b2c"
+  },
+  {
+    "id": 9,
+    "name": "SmokeUser",
+    "admin": false,
+    "passwordSalt": "a94c4df1e709322ab43018df5209ecf4",
+    "passwordHash": "82bd31d460950c1100394a987c02c2842adc4b7cf94e72edd2b0e2ff4e7ce6f82027bb2ec88c9df9a7889334ed1e0e32a7ae97e3b816562444425fe080542333"
+  },
+  {
+    "id": 10,
+    "name": "SmokeUser",
+    "admin": false,
+    "passwordSalt": "6cce695d668c9aaf90a5724cbed89d37",
+    "passwordHash": "a33a1a5917085f6439bd9f8191b03466ea5189b1b85467d24d5b441a5bf0231f8bd582381d0fbc02898fbbbc72ba8605ccf5f76438cf7152cab6430fca30cc1b"
+  },
+  {
+    "id": 11,
+    "name": "SmokeUser",
+    "admin": false,
+    "passwordSalt": "332c2c03f4cd3eeb2b4856ca9034911c",
+    "passwordHash": "fb79b02d72fe650d37bbbe8a9197660e9dfebfb411d319ba6581ed66eecb1cb7b0bcf820a30e452b5220739da69749aa623d297fe351402fb240762fff13a330"
+  },
+  {
+    "id": 12,
+    "name": "SmokeUser",
+    "admin": false,
+    "passwordSalt": "e5372ef8661739acb26e459005aa05b9",
+    "passwordHash": "b37eee94cce5aca8a80157c43a52b20f4b898efac8371cd756b5595bcc83ea6dca02edb1fd6d8734e44d2a534b611f97bced02d0b69ff79452e984987e65bea4"
+  },
+  {
+    "id": 13,
+    "name": "QuickTestUser",
+    "admin": false,
+    "passwordSalt": "33fbcbc9bee988df390cced075f356b4",
+    "passwordHash": "7224286a980672b299b8490613961901f43c165d2447017772aef3a9a4856d552e7bd4648c5b96ccc81ecfec5ec3d9818670bfded6830e51d2ba8b5b253ba23a"
+  },
+  {
+    "id": 14,
+    "name": "Bagriel Louvado",
+    "admin": false
+  }
+]

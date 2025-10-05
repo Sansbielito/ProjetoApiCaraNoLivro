@@ -1,0 +1,369 @@
+/* body { font-family: Arial, Helvetica, sans-serif; background:#f5f7fb; color:#222 } */
+/* .container { max-width:800px; margin:40px auto; background:#fff; padding:20px; border-radius:8px; box-shadow:0 6px 18px rgba(0,0,0,0.06) } */
+/* h1 { margin-top:0 } */
+/* form { margin-bottom:12px } */
+/* input, textarea, select { width:100%; padding:8px; margin:4px 0 8px; box-sizing:border-box } */
+/* button { padding:8px 12px } */
+/* ul { list-style:none; padding:0 } */
+/* li { padding:8px; border-bottom:1px solid #eee } */
+/* .post-meta { font-size:12px; color:#666 } */
+/*  */
+/* toast styles */
+/* .toast-container-wrapper { position: fixed; top: 20px; right: 20px; z-index: 9999; pointer-events: none; } */
+/* keep backward-compatible id selector */
+/* #toast-container, .toast-container-wrapper { position: fixed; top: 20px; right: 20px; z-index: 9999; pointer-events: none; } */
+/* #toast-container { display: flex; flex-direction: column; gap: 8px; pointer-events: none; } */
+/* .toast { background: #222; color: #fff; padding: 10px 14px; border-radius: 6px; box-shadow: 0 6px 18px rgba(0,0,0,0.12); opacity: 0.95; pointer-events: auto; transform: translateY(0); transition: opacity 250ms ease, transform 250ms ease; } */
+/* .toast.success { background: #2e7d32; } */
+/* .toast.error { background: #c62828; } */
+/* .toast.info { background: #1565c0; } */
+/*  */
+/* modal styles */
+/* .modal-hidden { display: none; } */
+/* #confirmModal { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; z-index: 10000; } */
+/* .modal-backdrop { position: absolute; inset: 0; background: rgba(0,0,0,0.45); } */
+/* .modal-box { position: relative; background: #fff; padding: 16px; border-radius: 8px; width: 320px; max-width: calc(100% - 32px); box-shadow: 0 8px 30px rgba(0,0,0,0.2); } */
+/* .modal-box h3 { margin: 0 0 8px 0 } */
+/* .modal-box p { margin: 0 } */
+
+/* * styles.css for CaraNoLivro
+ * Define estilos base, layout responsivo, forms, botões, listas e modais para simular um "fakebook".
+ */
+
+:root {
+    --primary-color: #1877f2; /* Facebook Blue */
+    --secondary-color: #42b72a; /* Facebook Green */
+    --background-light: #f0f2f5; /* Light Grey Background */
+    --background-card: #ffffff; /* White Card Background */
+    --text-color-dark: #1c1e21;
+    --text-color-muted: #606770;
+    --border-color: #dddfe2;
+    --danger-color: #c62828;
+    --shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Base and Resets */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--background-light);
+    color: var(--text-color-dark);
+    line-height: 1.5;
+    padding: 10px;
+    min-height: 100vh;
+}
+
+/* Main Layout */
+.container {
+    max-width: 700px; /* Um pouco mais estreito, como um feed centralizado */
+    margin: 20px auto 40px auto;
+    padding: 0;
+}
+
+/* Header - More like a social media app bar */
+h1 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    font-weight: 900;
+    padding: 10px 0;
+    background-color: var(--background-card);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky; /* Sticky header for better feel */
+    top: -10px; /* Adjust for body padding */
+    z-index: 50;
+    border-radius: 0 0 8px 8px;
+}
+
+h2 {
+    font-size: 1.1rem;
+    color: var(--text-color-dark);
+    margin-bottom: 15px;
+    padding-left: 0; /* Remove border-left for cleaner look */
+    border-left: none;
+    font-weight: bold;
+}
+
+section {
+    background-color: var(--background-card);
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-subtle);
+}
+
+/* Forms and Inputs */
+input, textarea, button {
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 10px;
+}
+
+input:focus, textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 1px var(--primary-color);
+}
+
+textarea {
+    width: 100%;
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Buttons */
+button {
+    cursor: pointer;
+    transition: background-color 0.2s, box-shadow 0.2s;
+    font-weight: 600; /* Ligeiramente menos bold */
+    color: var(--background-card);
+    background-color: var(--primary-color);
+    border: none;
+    line-height: 1.2;
+}
+
+button:hover {
+    background-color: #166fe5;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+button:active {
+    background-color: #145dbb;
+}
+
+/* Specific Button Styles */
+#userForm button[type="submit"], #postForm button[type="submit"] {
+    background-color: var(--secondary-color);
+    width: 100%;
+}
+
+#userForm button[type="submit"]:hover, #postForm button[type="submit"]:hover {
+    background-color: #36a420;
+}
+
+#deleteSelfBtn, #confirmOk {
+    background: var(--danger-color) !important;
+}
+
+#deleteSelfBtn:hover, #confirmOk:hover {
+    background: #af2323 !important;
+}
+
+#confirmCancel {
+    background: var(--text-color-muted);
+    color: white;
+}
+#confirmCancel:hover {
+    background: #545c66;
+}
+
+/* Authentication Area (#auth) */
+#auth {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    padding: 15px;
+    background-color: var(--background-light); /* Separate box for auth */
+    border-radius: 8px;
+}
+
+#auth input {
+    margin-bottom: 0;
+    flex-grow: 1;
+    min-width: 120px;
+}
+
+#loggedAs {
+    font-weight: 600;
+    color: var(--primary-color) !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-basis: 100%; /* For smaller screens, status gets its own line */
+    text-align: center;
+    padding-top: 5px;
+}
+
+/* User Form (Registration) */
+#userForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 10px;
+    margin-top: 15px;
+    align-items: end;
+}
+#userForm input, #userForm button {
+    margin-bottom: 0;
+}
+
+/* Post Form (Creation) */
+#postForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 15px;
+}
+#postForm button {
+    align-self: flex-end;
+    width: 100px; /* Publicar button shorter */
+}
+
+/* Lists - Simulating a Feed */
+#userList, #postList {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+/* Feed Item (Post Card) */
+#postList li {
+    background-color: var(--background-card);
+    border: 1px solid var(--border-color);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    display: block; /* Posts should be blocks, not flex lines */
+    box-shadow: var(--shadow-subtle);
+}
+
+/* User Item (User List) */
+#userList li {
+    background-color: var(--background-light); /* Less prominent background for user list */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+}
+#userList li:hover {
+    background-color: #e4e6eb;
+}
+
+/* Toast Notifications (for feedback messages) */
+#toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 2000;
+}
+
+.toast {
+    background-color: var(--text-color-dark);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    opacity: 0.95;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.toast.error {
+    background-color: var(--danger-color);
+}
+.toast.success {
+    background-color: var(--secondary-color);
+}
+
+/* Modals */
+.modal-hidden {
+    display: none;
+}
+
+#confirmModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
+.modal-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(2px);
+}
+
+.modal-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--background-card);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 90%;
+    text-align: left;
+}
+#confirmTitle {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+#confirmMessage {
+    color: var(--text-color-muted);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    body {
+        padding: 0;
+    }
+    .container {
+        margin-top: 0;
+    }
+    h1 {
+        border-radius: 0;
+    }
+    section {
+        margin-bottom: 15px;
+        border-radius: 0;
+        padding: 15px;
+    }
+
+    /* Auth area stacks inputs */
+    #auth {
+        flex-direction: column;
+        gap: 10px;
+    }
+    #auth input, #auth button {
+        width: 100%;
+        margin-bottom: 0;
+    }
+    #auth input {
+        text-align: center;
+    }
+    #loggedAs {
+        text-align: left;
+        padding-top: 0;
+    }
+
+    /* User Form stacks on mobile */
+    #userForm {
+        grid-template-columns: 1fr;
+    }
+}

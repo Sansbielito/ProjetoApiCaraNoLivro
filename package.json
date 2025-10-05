@@ -1,0 +1,16 @@
+{
+  "name": "caranolivro",
+  "version": "1.0.0",
+  "description": "API e frontend para o projeto CaraNoLivro (exemplo educativo)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "start:dev": "node server.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "optionalDependencies": {
+    "better-sqlite3": "^8.7.0",
+    "jsonwebtoken": "^9.0.2"
+  }
+}

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CaraNoLivro</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>CaraNoLivro</h1>
+
+  <!-- toast container -->
+  <div id="toast-container" aria-live="polite"></div>
+
+    <!-- confirmation modal -->
+    <div id="confirmModal" class="modal-hidden" role="dialog" aria-modal="true" aria-labelledby="confirmTitle">
+      <div class="modal-backdrop"></div>
+      <div class="modal-box">
+        <h3 id="confirmTitle">Confirmação</h3>
+        <p id="confirmMessage">Tem certeza?</p>
+        <div style="margin-top:12px;text-align:right">
+          <button id="confirmCancel">Cancelar</button>
+          <button id="confirmOk" style="margin-left:8px;background:#c62828;color:#fff">Confirmar</button>
+        </div>
+      </div>
+    </div>
+
+    <section id="users">
+      <h2>Usuários</h2>
+      <div id="auth">
+        <input id="loginUserId" placeholder="User ID para login" style="width:120px;display:inline-block" />
+        <input id="loginPassword" placeholder="Senha (opcional)" type="password" style="width:160px;display:inline-block;margin-left:6px" />
+        <button id="loginBtn">Login</button>
+        <button id="logoutBtn" style="display:none">Logout</button>
+        <button id="deleteSelfBtn" style="display:none;margin-left:8px;background:#c62828;color:#fff">Excluir minha conta</button>
+        <span id="loggedAs" style="margin-left:12px;color:#333"></span>
+      </div>
+      <form id="userForm">
+        <input id="userName" placeholder="Nome" required />
+        <input id="userPassword" placeholder="Senha (opcional)" type="password" />
+        <button type="submit">Criar usuário</button>
+      </form>
+      <ul id="userList"></ul>
+    </section>
+
+    <section id="posts">
+      <h2>Posts</h2>
+      <form id="postForm">
+        <textarea id="postContent" placeholder="Escreva algo..."></textarea>
+        <button type="submit">Publicar</button>
+      </form>
+      <ul id="postList"></ul>
+    </section>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>

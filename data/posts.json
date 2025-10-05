@@ -1,0 +1,57 @@
+[
+  {
+    "id": 2,
+    "userId": 1,
+    "content": "bom dia~",
+    "createdAt": "2025-10-05T15:06:16.696Z",
+    "updatedAt": "2025-10-05T18:42:28.525Z"
+  },
+  {
+    "id": 5,
+    "userId": 7,
+    "content": "smoke test post",
+    "createdAt": "2025-10-05T16:28:48.153Z"
+  },
+  {
+    "id": 6,
+    "userId": 8,
+    "content": "smoke test post",
+    "createdAt": "2025-10-05T16:34:31.191Z"
+  },
+  {
+    "id": 7,
+    "userId": 9,
+    "content": "smoke test post",
+    "createdAt": "2025-10-05T16:40:13.913Z"
+  },
+  {
+    "id": 8,
+    "userId": 10,
+    "content": "smoke test post",
+    "createdAt": "2025-10-05T16:43:41.466Z"
+  },
+  {
+    "id": 9,
+    "userId": 11,
+    "content": "smoke test post",
+    "createdAt": "2025-10-05T16:46:40.711Z"
+  },
+  {
+    "id": 10,
+    "userId": 12,
+    "content": "smoke test post",
+    "createdAt": "2025-10-05T16:47:31.345Z"
+  },
+  {
+    "id": 11,
+    "userId": 1,
+    "content": "td certo?",
+    "createdAt": "2025-10-05T18:42:43.735Z"
+  },
+  {
+    "id": 12,
+    "userId": 14,
+    "content": "aoba",
+    "createdAt": "2025-10-05T18:46:27.983Z"
+  }
+]
